@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'Hi, what would you like to learn about this document?',
+        message: 'Hi, what would you like to learn from our database?',
         type: 'apiMessage',
       },
     ],
@@ -125,8 +125,9 @@ export default function Home() {
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With Your Docs
+             CHILD Demo bot
           </h1>
+          <img src="banner.jpg" alt="banner"></img>
           <main className={styles.main}>
             <div className={styles.cloud}>
               <div ref={messageListRef} className={styles.messagelist}>
@@ -223,8 +224,8 @@ export default function Home() {
                     name="userInput"
                     placeholder={
                       loading
-                        ? 'Waiting for response...'
-                        : 'What is this legal case about?'
+                        ? 'Searching the database...'
+                        : 'Type in your questions here'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -261,9 +262,9 @@ export default function Home() {
           </main>
         </div>
         <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
-          </a>
+          
+            Powered by LangChainAI. Demo created by an Intern (Andrew), adapted from mayooear
+       
         </footer>
       </Layout>
     </>
