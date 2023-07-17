@@ -15,7 +15,7 @@ export const run = async () => {
   try {
     /*load raw docs from the all files in the directory */
     const directoryLoader = new DirectoryLoader(filePath, {
-      '.pdf': (path) => new PDFLoader(path),
+      '.pdf, .txt, .csv': (path) => new PDFLoader(path),
     });
 
     // const loader = new PDFLoader(filePath);
